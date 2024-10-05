@@ -11,17 +11,7 @@ export default defineConfig({
             ],
             refresh: true,
         }),
-        vue({
-            server:{
-                port:3000,
-            },
-            template: {
-                transformAssetUrls: {
-                    base: null,
-                    includeAbsolute: false,
-                },
-            },
-        }),
+        vue(),
     ],
     resolve: {
         alias: {

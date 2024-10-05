@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laravel Vue App</title>
-    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <title>Vue in Laravel 10</title>
+    @vite(['resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body>
 <div id="app">
     <example-component></example-component>
 </div>
-
-<script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>

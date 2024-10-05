@@ -6,7 +6,7 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
-// import ExampleComponent from './components/ExampleComponent.vue';
+import ExampleComponent from './components/ExampleComponent.vue';
 
 
 /**
@@ -17,8 +17,7 @@ import { createApp } from 'vue';
 
 const app = createApp({});
 
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
+app.component('ExampleComponent', ExampleComponent);
 
 /**
  * The following block of code may be used to automatically register your

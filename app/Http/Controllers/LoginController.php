@@ -16,7 +16,6 @@ class LoginController extends Controller
             'email' => 'required|email',
             'password' => 'required|string|min:6',
         ]);
-        dd($request->password, hash::make($request->password));
         if (Auth::attempt(['email' => $request->email, 'api_token' => hash::make($request->password)])) {
             $user = Auth::user();
             $token = $user->createToken('Access Token')->accessToken;

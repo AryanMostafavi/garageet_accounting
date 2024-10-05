@@ -1,8 +1,7 @@
-// resources/js/components/ExampleComponent.vue
 
 <template>
     <div>
-        <h1>Hello from Vue Component!</h1>
+        <h1>asdad</h1>
     </div>
 </template>
 

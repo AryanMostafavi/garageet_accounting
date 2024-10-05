@@ -30,3 +30,4 @@ Route::post('logout', [AuthController::class, 'logout']);
 Route::apiResource('costs', CostController::class);
 Route::apiResource('inventory', InvController::class);
 Route::apiResource('sales', SaleController::class);
+Route::resource('goods', GoodController::class);
