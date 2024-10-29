@@ -5,13 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Inv extends Model
+class Entity extends Model
 {
     use HasFactory;
-
-    protected $fillable = [
-        'name',
-        'address',
-        'desc'      
-    ];
 }

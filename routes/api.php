@@ -22,6 +22,7 @@ use App\Http\Resources\GoodController;
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });.
+Route::middleware(['cors'])->group(function () {
 
 Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
@@ -30,4 +31,5 @@ Route::post('logout', [AuthController::class, 'logout']);
 Route::apiResource('costs', CostController::class);
 Route::apiResource('inventory', InvController::class);
 Route::apiResource('sales', SaleController::class);
-Route::resource('goods', GoodController::class);
+Route::apiResource('goods', GoodController::class);
+    });

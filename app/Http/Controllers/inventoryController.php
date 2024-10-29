@@ -1,27 +1,25 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Good;
 use Illuminate\Http\Request;
 
-class GoodController extends Controller
+class inventoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
+        //
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-
+        //
     }
 
     /**
@@ -29,24 +27,8 @@ class GoodController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'name'=>'string|required',
-            'desc'=>'string|required',
-            'type'=>'string|required',
-        ]);
-        try {
-        Good::create([
-            'name' => $request->name,
-            'desc' => $request->desc,
-        'type' => $request->type
-        ]);
-    }catch (\Exception $exception){
-            return response()->json(['message' => $exception->getMessage()], 500);
-        }
-        return response()->json(['message' => 'Good created successfully'], 200);
+        //
     }
-
-
 
     /**
      * Display the specified resource.

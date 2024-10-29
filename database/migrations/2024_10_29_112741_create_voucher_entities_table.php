@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('invs', function (Blueprint $table) {
+        Schema::create('voucher_entities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
-            $table->string('desc');
+            $table->foreignId('voucher_id')->constrained()->onDelete('cascade');
+            $table->string('account_title');
+            $table->decimal('debit', 15, 2)->nullable();
+            $table->decimal('credit', 15, 2)->nullable();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('inv_models');
+        Schema::dropIfExists('voucher_entities');
     }
 };

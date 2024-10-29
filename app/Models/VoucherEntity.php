@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cost extends Model
+class VoucherEntity extends Model
 {
     use HasFactory;
-    protected $fillable = ['voucher_id', 'description', 'amount','user_id'];
-
-    public function voucher()
-    {
+    protected $fillable = ['voucher_id', 'account_title', 'debit', 'credit'];
+    public function voucher(){
         return $this->belongsTo(Voucher::class);
     }
 }

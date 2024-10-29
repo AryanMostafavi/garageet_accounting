@@ -11,14 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('costs', function (Blueprint $table) {
+        Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->date('date');
-            $table->string('about');
-            $table->text('desc');
-            $table->string('payment_user');
-            $table->string('bank_account');
-            $table->boolean('status');
+            $table->foreignId('voucher_id')->constrained()->onDelete('cascade');
+            $table->string('item_name');
+            $table->integer('quantity');
+            $table->decimal('unit_price', 15, 2);
+            $table->decimal('total_price', 15, 2);
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cost_models');
+        Schema::dropIfExists('sales');
     }
 };
