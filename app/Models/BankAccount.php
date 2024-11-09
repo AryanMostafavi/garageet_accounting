@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class BankAccount extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'account_name', 'balance'
+    ];
+
+    public function vouchers()
+    {
+        return $this->hasMany(Voucher::class);
+    }
 }

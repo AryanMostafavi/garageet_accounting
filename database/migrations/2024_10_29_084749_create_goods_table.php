@@ -15,8 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('type')->nullable();
-            $table->date('order_time')->nullable();
-            $table->string('desc')->nullable();
+            $table->date('order_id')->nullable();
             $table->string('section')->nullable();
             $table->decimal('cost_price', 15, 2);
             $table->decimal('sale_price', 15, 2);

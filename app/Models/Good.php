@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Good extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'stock', 'cost_price', 'sale_price'];
+    protected $fillable = ['name','type', 'order_id','section','cost_price', 'sale_price','description'];
 
     public function vouchers()
     {

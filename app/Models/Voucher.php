@@ -19,4 +19,13 @@ class Voucher extends Model
     {
         return $this->hasMany(VoucherEntity::class);
     }
+    public function costs()
+    {
+        return $this->hasMany(Cost::class);
+    }
+
+    public function goods()
+    {
+        return $this->belongsToMany(Good::class)->withPivot('quantity');
+    }
 }
