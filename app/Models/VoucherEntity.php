@@ -9,7 +9,10 @@ class VoucherEntity extends Model
 {
     use HasFactory;
     protected $fillable = ['voucher_id', 'account_title', 'debit', 'credit'];
-    public function voucher(){
+
+
+    public function voucher()
+    {
         return $this->belongsTo(Voucher::class);
     }
 }

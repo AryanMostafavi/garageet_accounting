@@ -8,13 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Cost extends Model
 {
     use HasFactory;
-    protected $fillable = ['voucher_id','user_id', 'description', 'amount'];
+
+    protected $fillable = [
+        'user_id',
+        'voucher_id',
+        'description',
+        'amount',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
     public function voucher()
     {
         return $this->belongsTo(Voucher::class);
-    }
-    public function user(){
-        return $this->belongsTo(User::class);
     }
 }

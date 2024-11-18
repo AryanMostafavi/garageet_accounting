@@ -28,6 +28,9 @@ Route::post('register', [AuthController::class, 'register']);
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout']);
 
+Route::apiResource('bank-accounts', BankAccountController::class);
+Route::apiResource('costs', CostController::class);
+
 Route::apiResource('costs', CostController::class);
 Route::apiResource('inventory', InvController::class);
 Route::apiResource('sales', SaleController::class);

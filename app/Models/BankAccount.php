@@ -10,11 +10,13 @@ class BankAccount extends Model
     use HasFactory;
 
     protected $fillable = [
-        'account_name', 'balance'
+        'account_name',
+        'user_id',
+        'balance',
     ];
 
-    public function vouchers()
+    public function user()
     {
-        return $this->hasMany(Voucher::class);
+        return $this->belongsTo(User::class);
     }
 }
